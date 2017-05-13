@@ -66,10 +66,11 @@ for item in A.flat:
 np.apply_along_axis(np.mean,axis=0, arr = A)
 np.apply_along_axis(np.mean,axis=1, arr = A)
 
-# Self defined function
+# Self defined function instead of NumPy function
 def foo(x):
     return x/2
 
 np.apply_along_axis(foo,axis=1,arr=A)
+np.apply_along_axis(foo,axis=0,arr=A)
 
     
