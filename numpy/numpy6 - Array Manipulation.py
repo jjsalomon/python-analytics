@@ -54,4 +54,7 @@ A3
 
 # axis = 0 -> row
 [A1,A2,A3] = np.split(A,[1,3],axis=0)
+A1
+A2
+A3
 
