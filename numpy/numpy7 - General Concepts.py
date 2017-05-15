@@ -41,12 +41,14 @@ a * b
 # 3. Broadcasting is the operation that allows an operator or a function
 # to act on two or more arrays to operate even if these arrays do not have exactly
 # the same shape.
-# Simple case
+# Simple case - only 1 goes through extension of dimension
 A = np.arange(16).reshape(4,4)
 b = np.arange(4)
 
 A + b
 
-# More complex case
+# More complex case - both case go through extension of dimension
 m = np.arange(6).reshape(3,1,2)
 n = np.arange(6).reshape(3,2,1)
+
+m + n
