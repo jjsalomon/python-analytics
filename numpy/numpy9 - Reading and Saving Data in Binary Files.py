@@ -33,3 +33,12 @@ data = np.genfromtxt('data.csv',delimiter = ',',names = True)
 # One positive aspect of this feature is that if the file contains missing data
 # the function knows how to handle it
 data2 = np.genfromtxt('data2.csv',delimiter=',',names = True)
+data2
+
+# We can see that the function replaces the blanks with nan values
+
+# We can use the headers to extract the column values
+data2['id']
+
+# We can use numerical indexes to extract row values
+data[0]
