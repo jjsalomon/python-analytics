@@ -104,6 +104,14 @@ frame
 frame[frame < 12]
 
 # 6. DataFrame from Nested Dict
+# Generate Nested Dictionary
 nestdict = {'red':{ 2012: 22, 2013: 33},
             'white':{2011: 13, 2012: 22, 2013:16},
             'blue':{2011:17, 2012:27, 2013:18}}
+# Place nested dictionary into DataFrame
+frame2 = pd.DataFrame(nestdict)
+# As you can see Pandas is able to compensate for missing data
+
+# 7. Transposition of a DataFrame
+# Columms become rows, rows become columns
+frame2.T
