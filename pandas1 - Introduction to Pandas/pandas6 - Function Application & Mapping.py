@@ -18,5 +18,26 @@ np.sqrt(frame)
 
 # 2. Functions by Row or Column
 # Define a lambda that calculates the range covered by the elements
-
 f = lambda x: x.max() - x.min()
+# OR
+def f(x):
+    return x.max() - x.min()
+# Using apply() - you can aply the function defined on the DataFrame
+frame.apply(f)
+# The result is only one value column
+# Apply by row instead
+frame.apply(f,axis = 1)
+
+# More useful case - extending the application to many functions
+def f(x):
+    return pd.Series([x.min(), x.max()], index=['min','max'])
+
+frame.apply(f)
+
+# 2. Statistic Functions
+# Summing values in columns
+frame.sum()
+# Mean of values in columns
+frame.mean()
+# Summary Statistic of Data
+frame.describe()
