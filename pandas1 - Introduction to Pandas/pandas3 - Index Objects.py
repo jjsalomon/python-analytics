@@ -21,3 +21,12 @@ ser.idxmax()
 # 3. Index with Duplicate Labels
 serd = pd.Series(range(6), index = ['white','white','blue','green','green','yellow'])
 serd
+# Return back values with index 'white'
+serd['white']
+
+# 4. Identifying unique/duplicate indexes
+# Valuable for Big Data
+# Series
+serd.index.is_unique
+# DataFrame
+frame.index.is_unique
